@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎解きミニフェス in 名古屋 | 10.17 - 10.18</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: M PLUS Rounded 1c for a pop and playful look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"M PLUS Rounded 1c"', 'sans-serif'],
+                    },
+                    colors: {
+                        pop: {
+                            yellow: '#FDE047', // bright yellow
+                            pink: '#F472B6',   // hot pink
+                            blue: '#38BDF8',   // sky blue
+                            green: '#4ADE80',  // lime green
+                            orange: '#FB923C', // bright orange
+                            purple: '#A78BFA', // soft purple
+                        }
+                    },
+                    boxShadow: {
+                        'pop': '6px 6px 0px 0px rgba(0,0,0,1)',
+                        'pop-sm': '3px 3px 0px 0px rgba(0,0,0,1)',
+                        'pop-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Fun polka dot background */
+            background-color: #fdf2f8; /* very light pink */
+            background-image: radial-gradient(#F472B6 2px, transparent 2px);
+            background-size: 30px 30px;
+            color: #111827;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 2px #000;
+            color: white;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-sans">
+
+    <!-- Header / Hero Section -->
+    <header class="pt-16 pb-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+        
+        <div class="inline-block bg-pop-pink border-4 border-black text-black font-black px-4 py-1 rounded-full mb-6 shadow-pop-sm rotate-[-3deg]">
+            <i class="fa-solid fa-star text-yellow-300 mr-1"></i> WAKU WAKU EVENT <i class="fa-solid fa-star text-yellow-300 ml-1"></i>
+        </div>
+
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black mb-6 tracking-wide drop-shadow-md">
+            <span class="block text-pop-blue text-stroke transform -rotate-2 mb-2">謎解きミニフェス</span>
+            <span class="block text-pop-yellow text-stroke transform rotate-2">in 名古屋</span>
+        </h1>
+        
+        <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+            <div class="bg-white border-4 border-black rounded-2xl px-8 py-3 shadow-pop transform hover:scale-105 transition-transform">
+                <p class="text-2xl sm:text-3xl font-black text-black">
+                    <i class="fa-solid fa-calendar-check text-pop-green mr-2"></i> 10.17<span class="text-lg">Sat</span> - 10.18<span class="text-lg">Sun</span>
+                </p>
+            </div>
+        </div>
+
+        <p class="mt-10 text-lg sm:text-xl font-bold bg-white/80 border-2 border-black rounded-xl p-4 inline-block shadow-pop-sm">
+            🎈 ポップでカラフルな謎解き体験！みんなでワイワイ楽しもう！ 🎈
+        </p>
+    </header>
+
+    <!-- Main Content: Game Grid -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <article class="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-pop hover:shadow-none hover:translate-y-[6px] hover:translate-x-[6px] transition-all duration-200 flex flex-col">
+                <div class="relative border-b-4 border-black aspect-video bg-pop-yellow flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/FDE047/000000?text=Sweets+Factory" alt="魔法のスイーツ工場からの脱出" class="w-full h-full object-cover">
+                    <div class="absolute top-0 left-0 bg-pop-pink text-white border-r-4 border-b-4 border-black text-sm font-black px-4 py-1">新作!</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-black mb-4 leading-tight">魔法のスイーツ工場からの脱出</h3>
+                    
+                    <ul class="space-y-3 mb-6 text-lg font-bold flex-grow">
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-clock text-pop-blue w-8 text-center text-xl"></i><span>所要時間: <strong>60分</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-face-smile text-pop-orange w-8 text-center text-xl"></i><span>人数: <strong>1〜4人</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-coins text-pop-yellow w-8 text-center text-xl"></i><span>料金: <strong>3,000円</strong></span></li>
+                    </ul>
+                    
+                    <a href="#ticket-1" class="w-full block text-center bg-pop-blue border-4 border-black text-white font-black text-xl py-3 px-4 rounded-xl shadow-pop-sm hover:shadow-none hover:translate-y-[3px] hover:translate-x-[3px] transition-all mt-auto">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> チケットGET!
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-pop hover:shadow-none hover:translate-y-[6px] hover:translate-x-[6px] transition-all duration-200 flex flex-col">
+                <div class="relative border-b-4 border-black aspect-video bg-pop-pink flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/F472B6/000000?text=Ghost+Party" alt="ドタバタ！おばけのパーティー" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-black mb-4 leading-tight">ドタバタ！おばけのパーティー</h3>
+                    
+                    <ul class="space-y-3 mb-6 text-lg font-bold flex-grow">
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-clock text-pop-blue w-8 text-center text-xl"></i><span>所要時間: <strong>45分</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-face-smile text-pop-orange w-8 text-center text-xl"></i><span>人数: <strong>2〜6人</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-coins text-pop-yellow w-8 text-center text-xl"></i><span>料金: <strong>2,500円</strong></span></li>
+                    </ul>
+                    
+                    <a href="#ticket-2" class="w-full block text-center bg-pop-pink border-4 border-black text-white font-black text-xl py-3 px-4 rounded-xl shadow-pop-sm hover:shadow-none hover:translate-y-[3px] hover:translate-x-[3px] transition-all mt-auto">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> チケットGET!
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-pop hover:shadow-none hover:translate-y-[6px] hover:translate-x-[6px] transition-all duration-200 flex flex-col">
+                <div class="relative border-b-4 border-black aspect-video bg-pop-green flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/4ADE80/000000?text=Colorful+Diamond" alt="消えたカラフルダイヤを探せ！" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-black mb-4 leading-tight">消えたカラフルダイヤを探せ！</h3>
+                    
+                    <ul class="space-y-3 mb-6 text-lg font-bold flex-grow">
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-clock text-pop-blue w-8 text-center text-xl"></i><span>所要時間: <strong>90分</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-face-smile text-pop-orange w-8 text-center text-xl"></i><span>人数: <strong>1〜4人</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-coins text-pop-yellow w-8 text-center text-xl"></i><span>料金: <strong>4,000円</strong></span></li>
+                    </ul>
+                    
+                    <a href="#ticket-3" class="w-full block text-center bg-pop-green border-4 border-black text-black font-black text-xl py-3 px-4 rounded-xl shadow-pop-sm hover:shadow-none hover:translate-y-[3px] hover:translate-x-[3px] transition-all mt-auto">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> チケットGET!
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-pop hover:shadow-none hover:translate-y-[6px] hover:translate-x-[6px] transition-all duration-200 flex flex-col">
+                <div class="relative border-b-4 border-black aspect-video bg-pop-orange flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/FB923C/000000?text=Animal+Circus" alt="アニマルサーカスの大ピンチ" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-black mb-4 leading-tight">アニマルサーカスの大ピンチ</h3>
+                    
+                    <ul class="space-y-3 mb-6 text-lg font-bold flex-grow">
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-clock text-pop-blue w-8 text-center text-xl"></i><span>所要時間: <strong>60分</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-face-smile text-pop-orange w-8 text-center text-xl"></i><span>人数: <strong>1〜2人</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-coins text-pop-yellow w-8 text-center text-xl"></i><span>料金: <strong>2,800円</strong></span></li>
+                    </ul>
+                    
+                    <a href="#ticket-4" class="w-full block text-center bg-pop-orange border-4 border-black text-black font-black text-xl py-3 px-4 rounded-xl shadow-pop-sm hover:shadow-none hover:translate-y-[3px] hover:translate-x-[3px] transition-all mt-auto">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> チケットGET!
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-pop hover:shadow-none hover:translate-y-[6px] hover:translate-x-[6px] transition-all duration-200 flex flex-col">
+                <div class="relative border-b-4 border-black aspect-video bg-pop-purple flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/A78BFA/000000?text=Space+Pirates" alt="宇宙海賊と秘密の宝の地図" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-black mb-4 leading-tight">宇宙海賊と秘密の宝の地図</h3>
+                    
+                    <ul class="space-y-3 mb-6 text-lg font-bold flex-grow">
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-clock text-pop-blue w-8 text-center text-xl"></i><span>所要時間: <strong>45分</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-face-smile text-pop-orange w-8 text-center text-xl"></i><span>人数: <strong>1〜5人</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-coins text-pop-yellow w-8 text-center text-xl"></i><span>料金: <strong>2,500円</strong></span></li>
+                    </ul>
+                    
+                    <a href="#ticket-5" class="w-full block text-center bg-pop-purple border-4 border-black text-white font-black text-xl py-3 px-4 rounded-xl shadow-pop-sm hover:shadow-none hover:translate-y-[3px] hover:translate-x-[3px] transition-all mt-auto">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> チケットGET!
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-pop hover:shadow-none hover:translate-y-[6px] hover:translate-x-[6px] transition-all duration-200 flex flex-col">
+                <div class="relative border-b-4 border-black aspect-video bg-pop-blue flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/38BDF8/000000?text=Time+Dinosaur" alt="タイムトラベル・ダイナソー" class="w-full h-full object-cover">
+                    <div class="absolute top-0 right-0 bg-pop-yellow text-black border-l-4 border-b-4 border-black text-sm font-black px-4 py-1">超人気!</div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-black mb-4 leading-tight">タイムトラベル・ダイナソー</h3>
+                    
+                    <ul class="space-y-3 mb-6 text-lg font-bold flex-grow">
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-clock text-pop-blue w-8 text-center text-xl"></i><span>所要時間: <strong>120分</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-face-smile text-pop-orange w-8 text-center text-xl"></i><span>人数: <strong>1〜4人</strong></span></li>
+                        <li class="flex items-center bg-gray-100 rounded-lg p-2 border-2 border-black"><i class="fa-solid fa-coins text-pop-yellow w-8 text-center text-xl"></i><span>料金: <strong>4,500円</strong></span></li>
+                    </ul>
+                    
+                    <a href="#ticket-6" class="w-full block text-center bg-pop-yellow border-4 border-black text-black font-black text-xl py-3 px-4 rounded-xl shadow-pop-sm hover:shadow-none hover:translate-y-[3px] hover:translate-x-[3px] transition-all mt-auto">
+                        <i class="fa-solid fa-ticket-simple mr-2"></i> チケットGET!
+                    </a>
+                </div>
+            </article>
+
+        </div>
+        
+        <!-- Attention / Note section -->
+        <div class="mt-16 bg-white border-4 border-black rounded-3xl p-6 max-w-3xl mx-auto shadow-pop">
+            <h4 class="text-xl font-black mb-4 flex items-center">
+                <i class="fa-solid fa-circle-exclamation text-pop-pink mr-2 text-2xl"></i> おねがい
+            </h4>
+            <ul class="list-disc list-inside text-base font-bold space-y-2">
+                <li>チケットは遊ぶ時間の10分前までに買ってね！</li>
+                <li>みんなで遊ぶ時も、1人1枚チケットが必要だよ。</li>
+                <li>一度買ったチケットはキャンセルできないので注意してね。</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 mt-12 z-10 border-t-8 border-pop-pink">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-black mb-2 text-pop-yellow">謎解きミニフェス in 名古屋</h2>
+            <p class="text-lg font-bold mb-6">開催日: 2026年 10月17日(土) - 18日(日)</p>
+            <p class="text-sm font-bold text-gray-400">&copy; 2026 謎解きミニフェス実行委員会. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
